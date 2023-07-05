@@ -1,0 +1,110 @@
+.header .bx {
+  color: var(--colorPrimary);
+}
+
+.header {
+  background-color: var(--bgWhite);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  gap: 1em;
+  width: 100%;
+  min-width: 300px;
+  height: var(--heightHeader);
+  z-index: 1;
+  border-bottom: 0.1em solid var(--colorPrimary);
+  position: fixed;
+}
+
+.header__home {
+  color: var(--colorPrimary);
+  font-size: 1.6rem;
+}
+
+.header__home,
+.navbar__login,
+.navbar__register,
+.navbar__purchases,
+.navbar__cart,
+.bxs-dashboard {
+  cursor: pointer;
+}
+
+.header__home:link,
+.header__home:visited {
+  color: var(--colorPrimary);
+}
+
+.bxs-dashboard {
+  padding: 0.2em;
+  border-radius: 0.1em;
+  font-size: 1.6rem;
+  z-index: 1;
+}
+
+.navbar__container {
+  background-color: var(--bgWhite);
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -50%;
+  padding: 6em 2em 2em;
+  border-bottom-left-radius: 1rem;
+  border-bottom: 0.1em solid var(--colorPrimary);
+  border-left: 0.1em solid var(--colorPrimary);
+  transition: right 0.5s;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5em;
+}
+
+.open {
+  right: 0;
+  transform: right 0.5s;
+}
+
+.navbar__list {
+  cursor: pointer;
+}
+
+.navbar__login,
+.navbar__register,
+.navbar__purchases,
+.navbar__cart {
+  display: flex;
+  align-items: end;
+  gap: 0.6em;
+}
+
+@media (min-width: 700px) {
+  .bxs-dashboard{
+    display: none;
+  }
+
+  .navbar__container{
+    background-color: transparent;
+    border: none;
+  }
+
+  .navbar{
+    height: var(--heightHeader);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    right: 10%;
+    padding: 0;
+  }
+}
+

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+:root {
+  --colorPrimary: #f85555;
+  --colorBorderInput: #f8555570;
+  --colorBtnText: #ffffff;
+  --colorwhiteText: #ffffff;
+  --text-gray: #c7c7c7;
+  --text-dark-gray: #868484;
+  --colorScroll: #f85555;
+  --colorBorderCardProduct: #f8555580;
+  --heightHeader: 6em;
+  --bgPrimary: radial-gradient(circle, rgba(255, 243, 243, 1) 0%, rgba(255, 243, 243, 1) 100%);
+  --bgWhite: #f6f6f6;
+  --colorLabel: #515151;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Amaranth', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html ::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background-color: var(--colorScroll);
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bgPrimary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li,
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+input {
+  outline: none;
+  font-family: inherit;
+  display: block;
+  color: var(--text-dark-gray);
+  appearance: none;
+  border: 1px solid;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+select {
+  appearance: none;
+  font-family: inherit;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center, center;
+  user-select: none;
+}
+
+i {
+  display: block;
+  font-size: 20px;
+  user-select: none;
+}
+
+hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid var(--colorBorderCardProduct);
+  /* border: 1px linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+  border-radius: 100%;
+  margin-top: 1em;
+}

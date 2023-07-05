@@ -1,0 +1,117 @@
+.home {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--heightHeader) + 2em) 1.5em 2em 1.5em;
+  gap: 1em;
+  position: relative;
+}
+
+.home__form {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form__input {
+  flex-direction: row;
+  padding-left: 1em;
+  height: 40px;
+  width: calc(100% - 40px);
+  border-color: var(--colorBorderInput);
+}
+
+.form__btn {
+  width: 40px;
+  background-color: var(--colorPrimary);
+  border-color: var(--colorPrimary);
+  color: var(--colorBtnText);
+}
+
+.home__filter--btn {
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: .5em;
+  color: var(--text-dark-gray);
+  border: none;
+  background-color: transparent;
+}
+
+.filter__btn--text {
+  letter-spacing: .05em;
+}
+
+.home__filters--Container {
+  background-color: var(--bgWhite);
+  border-bottom: 1px solid var(--colorPrimary);
+  border-left: 1px solid var(--colorPrimary);
+  border-bottom-left-radius: 20px;
+  width: 250px;
+  display: grid;
+  gap: .7em;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  z-index: 1;
+}
+
+.filters__show {
+  right: 0;
+}
+
+.filters__btn--closed {
+  display: grid;
+  justify-content: center;
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border: none;
+  justify-self: end;
+}
+
+.btn__closed--icon {
+  font-size: 25px;
+}
+
+.home__cardProduct--container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+@media (min-width: 800px) {
+  .home{
+    padding-left: calc(250px + 1.5em);
+  }
+  .home__filter--btn{
+    display: none;
+  }
+  
+  .home__filters--Container{
+    position: fixed;
+    top: var(--heightHeader);
+    border-bottom-left-radius: initial;
+    border-bottom: initial;
+    border-left: initial;
+    border-right: 1px solid var(--colorPrimary);
+    left: 0;
+    height: calc(100vh - var(--heightHeader));
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+  }
+  .filters__btn--closed{
+    display: none;
+  }
+
+  }

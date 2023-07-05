@@ -1,0 +1,27 @@
+.filterCategory__list--content {
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.filterCategory__list {
+    width: 100%;
+    display: grid;
+    padding: .5em;
+    color: var(--text-dark-gray);
+}
+
+.list__allProducts,
+.list__options {
+    width: 100%;
+    letter-spacing: .05rem;
+    cursor: pointer;
+    padding: .5em;
+    font-weight: 600;
+}
+
+.list__allProducts:hover,
+.list__options:hover {
+    background-color: var(--colorBorderCardProduct);
+    color: var(--colorwhiteText);
+}

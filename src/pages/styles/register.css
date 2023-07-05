@@ -1,0 +1,77 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: calc(var(--heightHeader) + 4em);
+    color: var(--colorLabel);
+}
+
+.register__container {
+    width: 80%;
+    min-width: 250px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.register__title {
+    text-align: center;
+    font-size: 1.8rem;
+    padding-bottom: 1em;
+}
+
+.register__firstName,
+.register__lastName,
+.register__email,
+.register__password,
+.register__phone {
+    display: grid;
+    width: 100%;
+}
+
+.register__label {
+    display: grid;
+    gap: 1em;
+    padding-bottom: 0.3em;
+}
+
+.register__input {
+    color: var(--colorLabel);
+    height: 2.5em;
+    border: 0.5px solid var(--colorBorderInput);
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+    text-indent: 0.5em;
+}
+
+/* .login__req {
+    font-size: 0.8rem;
+} */
+
+.register__btn {
+    background-color: var(--colorPrimary);
+    color: var(--colorBtnText);
+    padding: 0.8em 1.4em;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 0.25em;
+    margin: 0.5em;
+}
+
+.register__login {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.register__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+    color: var(--colorPrimary);
+    padding-top: 1em;
+}

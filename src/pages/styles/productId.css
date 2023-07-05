@@ -1,0 +1,28 @@
+.productId__container{
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: var(--heightHeader);
+}
+
+.productId__content {
+    width: 90%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: var(--colorwhiteText);
+    padding: 1em;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+@media (min-width: 800px) {
+    .productId__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
