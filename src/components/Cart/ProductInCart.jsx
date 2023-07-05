@@ -13,7 +13,7 @@ const ProductInCart = ({ prodCart }) => {
   return (
     <article className='prodcart'>
       <header className='prodcart__header' >
-        <img className='prodcart__img' src={prodCart.product.images[0].url} alt="" />
+        <img className='prodcart__img' src={prodCart?.product?.productImgs[0]?.url} alt={prodCart?.product.title} />
       </header>
       <h3 className='prodcart__title' >{prodCart.product.title}</h3>
       <button className='prodcart__delete--icon' onClick={handleDeleteCart} >

@@ -13,9 +13,10 @@ export const { setProductsGlobal } = productsSlice.actions
 
 export default productsSlice.reducer
 
-export const getAllProductsThunk = (url = 'https://e-commerce-api-v2.academlo.tech/api/v1/products') => dispatch => {
+const URL_BASE = import.meta.env.VITE_REACT_APP_URL
 
-  axios.get(url)
-    .then(res => dispatch(setProductsGlobal(res.data)))
-    .catch(err => console.log(err))
-}
+  export const getAllProductsThunk = (url = `${URL_BASE}/products`) => dispatch => {
+  	axios.get(url)
+  	.then(res => dispatch(setProductsGlobal(res.data)))
+  	.catch(err => console.log(err))
+  }

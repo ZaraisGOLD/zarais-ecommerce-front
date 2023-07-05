@@ -29,7 +29,7 @@ const SliderImgs = ({ product }) => {
     <div className='slider'>
       <div style={objStyle} className='slider__interior'>
         {
-          product?.images.map(imgInfo => (
+          product?.productImgs.map(imgInfo => (
             <div className='slider__img--container' key={imgInfo.id} >
               <img className='slider__img' src={imgInfo.url} alt={product?.title} />
             </div>

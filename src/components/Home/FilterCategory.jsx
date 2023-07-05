@@ -4,9 +4,12 @@ import { getAllProductsThunk } from '../../store/slices/products-slice'
 import { useDispatch } from 'react-redux'
 import './styles/filterCategory.css'
 
+
 const FilterCategory = ({ setOpenFilters }) => {
 
-  const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/categories'
+  const URL_BASE = import.meta.env.VITE_REACT_APP_URL
+
+  const url = `${URL_BASE}/categories`
 
   const [categories, getCategories] = useFetch(url)
 
@@ -17,7 +20,7 @@ const FilterCategory = ({ setOpenFilters }) => {
   }, [])
 
   const handleCategories = id => {
-    const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=${id}`
+    const url = `${URL_BASE}/products?categoryId=${id}`
     dispatch(getAllProductsThunk(url))
     setOpenFilters(false)
   }

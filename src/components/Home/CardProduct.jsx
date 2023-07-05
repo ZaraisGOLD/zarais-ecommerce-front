@@ -17,13 +17,13 @@ const CardProduct = ({ product }) => {
 
   const handleBtnClick = e => {
     e.stopPropagation()
-    if(token){
-    const data = {
-      quantity: 1,
-      productId: product.id
-    }
+    if (token) {
+      const data = {
+        quantity: 1,
+        productId: product.id
+      }
       addProductToCart(data)
-    }else{
+    } else {
       navigate('/login')
     }
   }
@@ -31,8 +31,8 @@ const CardProduct = ({ product }) => {
   return (
     <article className='product'>
       <header className='product__header' onClick={handleSelectProduct}>
-        <img className='header__img image1' src={product.images[0].url} alt={product.title} />
-        <img className='header__img image2' src={product.images[1].url} alt={product.title} />
+        <img className='header__img image1' src={product?.productImgs[0].url} alt={product.title} />
+        <img className='header__img image2' src={product?.productImgs[1].url} alt={product.title} />
       </header>
       <section className='product__body'>
         <div className='product__name'>
@@ -44,7 +44,7 @@ const CardProduct = ({ product }) => {
           <h4 className='product__price--value'>{product.price}</h4>
         </div>
         <button className='product__btn--addTocart' onClick={handleBtnClick} >
-        <i className='bx bxs-cart-add product__btn--icon' ></i>
+          <i className='bx bxs-cart-add product__btn--icon' ></i>
         </button>
       </section>
     </article>

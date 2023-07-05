@@ -8,7 +8,7 @@ export const ProductPurchase = ({ prodPurchased }) => {
     <article className='productPurchase__container'>
       <div className='productPurchase__content'>
         <div className='productPurchase__imgContainer'>
-          <img className='productPurchase__img' src={prodPurchased.product.images[2].url} alt="" />
+          <img className='productPurchase__img' src={prodPurchased.product?.productImgs[0].url} alt="" />
         </div>
         <h3 className='productPurchase__productName'>{prodPurchased.product.title}</h3>
         <div className='productPurchase__data'>
